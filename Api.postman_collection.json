@@ -1,0 +1,948 @@
+{
+	"info": {
+		"_postman_id": "c9019071-132a-4e86-bbcf-4de2bbaf2e44",
+		"name": "Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "10352369"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "UserRegister",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/register?first_name=test1&last_name=test1&email=freitezabraham@gmail.com&password=123456&phone=15151548&address=addressTest&country_id=70&province_id=2&city_id=1&consent_to_receive_newsletter=1&business=1",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"register"
+							],
+							"query": [
+								{
+									"key": "first_name",
+									"value": "test1"
+								},
+								{
+									"key": "last_name",
+									"value": "test1"
+								},
+								{
+									"key": "email",
+									"value": "freitezabraham@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								},
+								{
+									"key": "phone",
+									"value": "15151548"
+								},
+								{
+									"key": "address",
+									"value": "addressTest"
+								},
+								{
+									"key": "country_id",
+									"value": "70"
+								},
+								{
+									"key": "province_id",
+									"value": "2"
+								},
+								{
+									"key": "city_id",
+									"value": "1"
+								},
+								{
+									"key": "consent_to_receive_newsletter",
+									"value": "1"
+								},
+								{
+									"key": "business",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/login?email=admin@gmail.com&password=123456",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserLogout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|z86EoHiEsG1oobOfSCpb94UEic4brxoCz2F6v1Tw"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{URL_API}}/logout"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "CreateUserSubClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/users/register-sub-client?first_name=tesds&last_name=ss&email=test_subclient2@gmail.com&password=123456&phone=15151548&address=addressTest&country_id=70&province_id=2&city_id=1&consent_to_receive_newsletter=0&business=1&user_id_parent=2",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"users",
+								"register-sub-client"
+							],
+							"query": [
+								{
+									"key": "first_name",
+									"value": "tesds"
+								},
+								{
+									"key": "last_name",
+									"value": "ss"
+								},
+								{
+									"key": "email",
+									"value": "test_subclient2@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								},
+								{
+									"key": "phone",
+									"value": "15151548"
+								},
+								{
+									"key": "address",
+									"value": "addressTest"
+								},
+								{
+									"key": "country_id",
+									"value": "70"
+								},
+								{
+									"key": "province_id",
+									"value": "2"
+								},
+								{
+									"key": "city_id",
+									"value": "1"
+								},
+								{
+									"key": "consent_to_receive_newsletter",
+									"value": "0"
+								},
+								{
+									"key": "business",
+									"value": "1"
+								},
+								{
+									"key": "user_id_parent",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/users/2?first_name=Juan",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"users",
+								"2"
+							],
+							"query": [
+								{
+									"key": "first_name",
+									"value": "Juan"
+								},
+								{
+									"key": "last_name",
+									"value": "test2",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "15151548",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "addressTest",
+									"disabled": true
+								},
+								{
+									"key": "country_id",
+									"value": "70",
+									"disabled": true
+								},
+								{
+									"key": "province_id",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "city_id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "consent_to_receive_newsletter",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "business",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "user_id_parent",
+									"value": "3",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{URL_API}}/users/2"
+					},
+					"response": []
+				},
+				{
+					"name": "DisableUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "{{URL_API}}/users/2/disable"
+					},
+					"response": []
+				},
+				{
+					"name": "Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/users?limit=50&page=1&search=a&country_id=1&province_id=2&city_id=3",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "50"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": "a"
+								},
+								{
+									"key": "country_id",
+									"value": "1"
+								},
+								{
+									"key": "province_id",
+									"value": "2"
+								},
+								{
+									"key": "city_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/user/search?search=a&country_id=1&province_id=2&city_id=3",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"user",
+								"search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "a"
+								},
+								{
+									"key": "country_id",
+									"value": "1"
+								},
+								{
+									"key": "province_id",
+									"value": "2"
+								},
+								{
+									"key": "city_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangePasswordUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/user/change-password?password=123456",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"user",
+								"change-password"
+							],
+							"query": [
+								{
+									"key": "password",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Countries",
+			"item": [
+				{
+					"name": "Countries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/countries?search=b&page=1&limit=50",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"countries"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "b"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchCountry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/country/search?search=vir",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"country",
+								"search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "vir"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCountry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/countries?name=Venezuela&code=ve&phone_code=+58",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"countries"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Venezuela"
+								},
+								{
+									"key": "code",
+									"value": "ve"
+								},
+								{
+									"key": "phone_code",
+									"value": "+58"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowCountry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL_API}}/countries/263"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCountry",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/countries/239",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"countries",
+								"239"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Canada",
+									"disabled": true
+								},
+								{
+									"key": "code",
+									"value": "CA",
+									"disabled": true
+								},
+								{
+									"key": "phone_code",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCountry",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{URL_API}}/countries/263"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Provinces",
+			"item": [
+				{
+					"name": "Provinces",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/provinces?search=Southern&page=1&limit=50",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"provinces"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Southern"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchProvince",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/province/search?country_id=39",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"province",
+								"search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "B",
+									"disabled": true
+								},
+								{
+									"key": "country_id",
+									"value": "39"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProvince",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/provinces?name=Lo que sea&code=SO&country_id=1000",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"provinces"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lo que sea"
+								},
+								{
+									"key": "code",
+									"value": "SO"
+								},
+								{
+									"key": "country_id",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowProvince",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL_API}}/provinces/4852"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProvince",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/provinces/2?name=Amhara Region&code=AM&country_id=262",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"provinces",
+								"2"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Amhara Region"
+								},
+								{
+									"key": "code",
+									"value": "AM"
+								},
+								{
+									"key": "country_id",
+									"value": "262"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProvince",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{URL_API}}/provinces/4852"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cities",
+			"item": [
+				{
+					"name": "Cities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/cities?limit=50&page=2&search=a",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"cities"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "50"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "search",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchCity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/city/search?province_id=3883&search=a",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"city",
+								"search"
+							],
+							"query": [
+								{
+									"key": "country_id",
+									"value": "39",
+									"disabled": true
+								},
+								{
+									"key": "province_id",
+									"value": "3883"
+								},
+								{
+									"key": "search",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/cities?name=Lo que sea&country_id=70&province_id=11",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"cities"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Lo que sea"
+								},
+								{
+									"key": "country_id",
+									"value": "70"
+								},
+								{
+									"key": "province_id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShowCity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL_API}}/cities/141853"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCity",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/cities/2?country_id=70&province_id=11",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"cities",
+								"2"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Canillo",
+									"disabled": true
+								},
+								{
+									"key": "country_id",
+									"value": "70"
+								},
+								{
+									"key": "province_id",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCity",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{URL_API}}/cities/141852"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Log",
+			"item": [
+				{
+					"name": "CurrentLogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{URL_API}}/current-logs"
+					},
+					"response": []
+				},
+				{
+					"name": "HistoryLogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_API}}/history-logs?date=2023-03-10",
+							"host": [
+								"{{URL_API}}"
+							],
+							"path": [
+								"history-logs"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2023-03-10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RecoverPasswordUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL_API}}/user/recover-password?email=freitezabraham@gmail.com",
+					"host": [
+						"{{URL_API}}"
+					],
+					"path": [
+						"user",
+						"recover-password"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "freitezabraham@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "4|BYCis7KiTcRnz1LfJUQXbPb53E5sFk9nkZEMGtQM"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_API",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
